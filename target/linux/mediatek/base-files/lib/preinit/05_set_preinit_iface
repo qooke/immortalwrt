@@ -1,5 +1,6 @@
 set_preinit_iface() {
 	case $(board_name) in
+	airopi,ax3|\
 	bazis,ax3000wm|\
 	cudy,m3000-v1|\
 	cudy,m3000-v2-yt8821|\
@@ -10,6 +11,7 @@ set_preinit_iface() {
 	glinet,gl-mt2500-airoha|\
 	glinet,gl-mt3000|\
 	openembed,som7981|\
+	peanutpi,r3s-mini|\
 	wavlink,wl-wn573hx3)
 		ip link set eth1 up
 		ifname=eth1
