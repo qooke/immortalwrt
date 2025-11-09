@@ -80,6 +80,7 @@ platform_do_upgrade() {
 	case "$board" in
 	abt,asr3000|\
 	acer,predator-w6x-ubootmod|\
+	airopi,ax3|\
 	asus,zenwifi-bt8-ubootmod|\
 	bananapi,bpi-r3|\
 	bananapi,bpi-r3-mini|\
@@ -281,6 +282,7 @@ platform_check_image() {
 	case "$board" in
 	abt,asr3000|\
 	acer,predator-w6x-ubootmod|\
+	airopi,ax3|\
 	asus,zenwifi-bt8-ubootmod|\
 	bananapi,bpi-r3|\
 	bananapi,bpi-r3-mini|\
@@ -351,6 +353,20 @@ platform_check_image() {
 
 platform_copy_config() {
 	case "$(board_name)" in
+	airopi,ax3|\
+	bananapi,bpi-r3|\
+	bananapi,bpi-r3-mini|\
+	bananapi,bpi-r4|\
+	bananapi,bpi-r4-2g5|\
+	bananapi,bpi-r4-poe|\
+	bananapi,bpi-r4-lite|\
+	cmcc,rax3000m|\
+	gatonetworks,gdsp|\
+	mediatek,mt7988a-rfb)
+		if [ "$CI_METHOD" = "emmc" ]; then
+			emmc_copy_config
+		fi
+		;;
 	acer,predator-w6|\
 	acer,predator-w6d|\
 	acer,vero-w6m|\
