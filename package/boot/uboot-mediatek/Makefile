@@ -253,6 +253,18 @@ define U-Boot/mt7981_cetron_ct3003
   BL2_SOC:=mt7981
   BL2_DDRTYPE:=ddr3
   DEPENDS:=+trusted-firmware-a-mt7981-spim-nand-ddr3
+
+define U-Boot/mt7981_airopi_ax3
+  NAME:=AiroPi AX3
+  BUILD_SUBTARGET:=filogic
+  BUILD_DEVICES:=airopi_ax3
+  UBOOT_CONFIG:=mt7981_airopi_ax3
+  UBOOT_IMAGE:=u-boot.fip
+  BL2_BOOTDEV:=nor
+  BL2_SOC:=mt7981
+  BL2_DDRTYPE:=ddr4
+  FIP_COMPRESS:=1
+  DEPENDS:=+trusted-firmware-a-mt7981-nor-ddr4
 endef
 
 define U-Boot/mt7981_cmcc_a10
@@ -1253,6 +1265,7 @@ UBOOT_TARGETS := \
 	mt7981_abt_asr3000 \
 	mt7981_bazis-ax3000wm \
 	mt7981_cetron_ct3003 \
+	mt7981_airopi_ax3 \
 	mt7981_cmcc_a10 \
 	mt7981_cmcc_rax3000m-emmc \
 	mt7981_cmcc_rax3000m-nand \
