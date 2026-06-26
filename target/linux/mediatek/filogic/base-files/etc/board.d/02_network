@@ -154,6 +154,7 @@ mediatek_setup_interfaces()
 	glinet,gl-x3000|\
 	glinet,gl-xe3000|\
 	openembed,som7981|\
+	melonpi,m81-pro|\
 	openwrt,one|\
 	peanutpi,r3s-mini)
 		ucidef_set_interfaces_lan_wan eth1 eth0

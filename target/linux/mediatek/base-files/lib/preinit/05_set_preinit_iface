@@ -10,6 +10,7 @@ set_preinit_iface() {
 	glinet,gl-mt2500|\
 	glinet,gl-mt2500-airoha|\
 	glinet,gl-mt3000|\
+	melonpi,m81-pro|\
 	openembed,som7981|\
 	peanutpi,r3s-mini|\
 	wavlink,wl-wn573hx3)
